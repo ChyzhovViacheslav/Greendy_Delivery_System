@@ -1,4 +1,4 @@
-$container: 1200;
+$container: 1180;
 $md1: $container + 12;
 $md2: 991.98;
 $md3: 767.98;
@@ -24,8 +24,49 @@ $md4: 479.98;
         max-width: none;
         padding: 0 10px;
     }
-    @media (max-width: ($md4 + px)){
+    @media (max-width: ($md4 + px)) {
         max-width: none;
-        padding: 0 10px;
+        padding: 0 16px;
     }
+}
+
+$primary-color-700: #00B871;
+$primary-color-400: #2FDF84;
+$primary-color-50: #F4FBF7;
+$gray-400: #161E2E;
+$gray-300: #9BA4B0;
+$gray-200: #D2D6DC;
+$gray-100: #F7F7F8;
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+    font-family: "Gordita";
+    color: $gray-400;
+}
+
+h1 {
+    font-size: 48px;
+    line-height: 60px;
+}
+
+h2{
+    font-size: 32px;
+    line-height: 48px;
+}
+h3{
+    font-size: 24px;
+    line-height: 36px;
+}
+h4{
+    font-size: 18px;
+    line-height: 22px;
+}
+
+p{
+    font-size: 14px;
+    line-height: 18px;
 }

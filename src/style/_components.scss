@@ -1,0 +1,28 @@
+.button{
+    cursor: pointer;
+    border-radius: 12px;
+    background-color: $primary-color-700;
+    padding: 14px 32px;
+    transition: background-color 0.3s ease-in-out;
+    span{
+        font-family: 'Gordita';
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 20px;
+        text-transform: uppercase;
+        color: $primary-color-50;
+    }
+    &:hover{
+        background-color: $primary-color-400;
+    }
+}
+
+.circle{
+    width: 545px;
+    height: 545px;
+    border-radius: 100%;
+    background-color: $primary-color-400;
+    .range{
+        
+    }
+}
