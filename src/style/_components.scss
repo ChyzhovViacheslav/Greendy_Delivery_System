@@ -17,12 +17,14 @@
     }
 }
 
-.circle{
+.green-circle{
+    position: absolute;
     width: 545px;
     height: 545px;
-    border-radius: 100%;
-    background-color: $primary-color-400;
-    .range{
-        
+    .c1{
+        fill: $primary-color-400;
+    }
+    .c2{
+        fill: $primary-color-700;
     }
 }
