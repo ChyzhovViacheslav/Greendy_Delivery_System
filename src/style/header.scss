@@ -1,8 +1,15 @@
 .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #ffffff;
+    overflow-x: hidden;
+    z-index: 999;
     &__body {
         display: flex;
         justify-content: space-between;
         padding: 18px;
+        align-items: center;
     }
     &__ico {
         img {
@@ -11,6 +18,7 @@
     }
     &__list {
         display: flex;
+        align-items: center;
     }
 
     &__list-item {
@@ -18,6 +26,7 @@
         height: 100%;
         border-bottom: 3px solid inherit;
         transition: border-bottom 0.3s ease-in-out;
+        cursor: pointer;
         span {
             color: #000000;
             font-family: "Gordita";
@@ -29,10 +38,68 @@
         }
     }
 
-    .active{
+    .active {
         border-bottom: 3px solid $primary-color-700;
-        span{
+        span {
             color: $primary-color-700;
+        }
+    }
+
+    &__burger {
+        display: none;
+        width: 24px;
+        height: 24px;
+        position: relative;
+        &::before, &::after {
+            position: absolute;
+            content: '';
+            width: 20px;
+            height: 2px;
+            transform: translate(-50%, -50%);
+            left: 50%;
+            border-radius: 12px;
+            background-color: #000000;
+            transition-property: top, transform;
+            transition-duration: 0.3s;
+            transition-timing-function: ease-in-out;
+        }
+        &::before{
+            top: 8px;
+        }
+        &::after{
+            top: 12px;
+        }
+    }
+    @media (max-width: ($md3 + px)) {
+        &__burger {
+            display: block;
+        }
+        &__list {
+            background: #ffffff;
+            box-shadow: 0px 6px 16px 4px rgba(47, 223, 132, 35%);
+            border-radius: 12px;
+            width: 95%;
+            padding: 36px 0px;
+            transform: translate(-50%, -50%);
+            position: fixed;
+            top: -100%;
+            left: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            row-gap: 16px;
+            transition: top 0.3s ease-in-out;
+        }
+    }
+    .show{
+        &::before{
+            top: 12px;
+            transform: translate(-50%, -50%) rotate(135deg);
+        }
+        &::after{
+            top: 12px;
+            transform: translate(-50%, -50%) rotate(-135deg);
         }
     }
 }

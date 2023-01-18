@@ -10,7 +10,7 @@ const currentTariff = document.querySelectorAll('#current-tariff')
 current.style.height = `${month.offsetHeight}px`
 current.style.width = `${month.offsetWidth + 8}px`
 current.style.left = '8px'
-
+month.classList.add('active')
 const monthClickHandler = () => {
     current.style.width = `${month.offsetWidth + 8}px`
     current.style.left = '8px'
@@ -18,6 +18,8 @@ const monthClickHandler = () => {
     pro.textContent = `$99`
     premium.textContent = `$128`
     currentTariff.forEach(el => el.textContent = 'monthly')
+    year.classList.remove('active')
+    month.classList.add('active')
 }
 
 const yearClickHandler = () => {
@@ -27,6 +29,8 @@ const yearClickHandler = () => {
     pro.textContent = `$${99 * 12}`
     premium.textContent = `$${128 * 12}`
     currentTariff.forEach(el => el.textContent = 'yearly')
+    month.classList.remove('active')
+    year.classList.add('active')
 }
 
 month.addEventListener('click', () => monthClickHandler())

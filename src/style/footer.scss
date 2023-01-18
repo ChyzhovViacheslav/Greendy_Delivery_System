@@ -60,4 +60,31 @@
             color: $primary-color-50;
         }
     }
+    @media (max-width: ($md2 + px)) {
+        &__links {
+            column-gap: 90px;
+        }
+    }
+    @media (max-width: ($md3 + px)) {
+        &__body{
+            padding: 48px 0px 24px 0px;
+        }
+        &__content {
+            flex-direction: column;
+            row-gap: 32px;
+        }
+        &__links {
+            flex-wrap: wrap;
+            align-items: center;
+            row-gap: 32px;
+            column-gap: 70px;
+        }
+        &__copyright {
+            text-align: center;
+            span {
+                font-size: 14px;
+                line-height: 28px;
+            }
+        }
+    }
 }
